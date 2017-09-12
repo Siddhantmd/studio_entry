@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <script>			 
+			function show_value2(x2){
+			 document.getElementById("slider_value2").innerHTML=x2;
+			 
+			}
+			
+			function show_value(x){
+			 document.getElementById("slider_value").innerHTML=x;
+			 
+			}
+			
+			function show_value4(x4){
+			 document.getElementById("slider_value4").innerHTML=x4;
+			 
+			}
+			
+			function show_value5(x5){
+			 document.getElementById("slider_value5").innerHTML=x5;
+			 
+			}
+			function show_value6(x6){
+			 document.getElementById("slider_value6").innerHTML=x6;
+			 
+		
+			
+			}
+			function show_value7(x7){
+			 document.getElementById("slider_value7").innerHTML=x7;
+			 
+			}
+			
+			function show_value8(x8){
+			 document.getElementById("slider_value8").innerHTML=x8;
+			 
+			}
+
+			console.log(Math.floor(127+ ((40-25)/20*128) ))	
+	  </script>
+	    <meta charset="UTF-8">
+
+	    <title>Hypotrochoid Generator</title>
+
+	    <script src="libraries/p5.js" type="text/javascript"></script>
+	    <script src="libraries/p5.dom.js" type="text/javascript"></script>
+	    <script src="libraries/p5.sound.js" type="text/javascript"></script>
+	    <script src="sketch.js" type="text/javascript"></script>
+
+    	<style> 
+	    	body {padding: 0; margin: 0;} 
+	    	canvas {vertical-align: top;}
+
+    	</style>
+  </head>
+
+  <body style='background-color:#ffffff;'>	  
+	
+	
+	<div>
+		<h1><a href="https://en.wikipedia.org/wiki/Hypotrochoid">Hypotrochoid Generator</a></h1>
+		
+		<span class="text">Name</span><input id="name_" value="Blaagh!" /><br>
+
+		<span class="text">Age</span>
+		21<input id="siz" value="25" type="range" min="21" max="30" step="1" onchange="show_value2(this.value);">30
+		<span id="slider_value2" style="color:red;"></span><br>
+
+		<span class="text">Latitude</span><input id="lat" value="22.5782116" />
+
+	    <span class="text">Longitude</span><input id="lon" value="82.76814735" /><br>
+		
+		<span class="text">Gender</span><select id="gender" value="f"><br>
+			<option value="f">f</option>
+			<option value="m">m</option>
+		</select><br>
+
+		<span class="text">Temperature (&deg;C)</span><input id="temperature" value="25" />
+		<span class="text">Humidity (%)</span><input id="humidity" value="41" /><br>
+
+		<span class="text">Ratio of big circle to small circle</span>
+		<input id="smalltowhole" value="1/99" /><br>
+		
+
+		<!-- Ratio of big circle to size -->
+		<span class="text">Ratio of big circle to size</span>
+		0.01<input id="rad_big" value="0.6" type="range" min="0.001" max="1.053" step=".001" onchange="show_value(this.value);">1.053
+		<span id="slider_value" style="color:red;"></span><br>
+
+		<span class="text">Completeness</span>
+		0.01<input id="comp" value="1" min="0" max="1" step="0.001" onchange="show_value4(this.value);">1
+		<span id="slider_value4" style="color:red;"></span><br>
+
+		<span class="text">Graininess (Greater the value, greater the grain)</span>
+		1<input id="grain" value="1" type="range" min="1" max="50" step="1" onchange="show_value5(this.value);">50
+		<span id="slider_value5" style="color:red;"></span><br>
+
+		<span class="text">Stroke Weight</span>
+		0.25<input id="strokeweight" value="0.25" type="range" min="0.25" max="50" step="0.25" onchange="show_value8(this.value);">50
+		<span id="slider_value8" style="color:red;"></span><br>
+
+		<!-- <span id="slider_value7" style="color:red;"></span><br> -->
+		<button id="submit2" >Create!</button></br>
+		<button id="savec" >Save image</button> 
+    </div>
+    <div id="sketch-holder" ></div>
+  </body>
+</html>
